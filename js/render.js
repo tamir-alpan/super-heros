@@ -1,7 +1,3 @@
-function renderPlayer(character) {
-
-}
-
 function renderQuestions(questionList) {
     var container = document.querySelector(".questions")
     questionList.forEach(function (question) {
@@ -9,13 +5,19 @@ function renderQuestions(questionList) {
         questionContainer.className = "questionContainer"
         var img = document.createElement("img")
         img.src = question.img
-        questionContainer.onclick = function(){
-            console.log(question);
-        }
+        questionContainer.onclick = onQuestionClick.bind(event, question);
         questionContainer.appendChild(img)
         container.appendChild(questionContainer)
     })
 }
+
+function onQuestionClick(question, e) {
+    console.log(question)
+    // TODO: use sweet alerts to open the dialog on question click
+    // (copy from todo project render.js onOpenAddList function)
+    // TODO: bonus: render the above question text in the dialog
+}
+
 
 function renderPlayer(player) {
     var container = document.querySelector(".character")

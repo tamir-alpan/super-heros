@@ -8,6 +8,7 @@ function play() {
     renderQuestions(questions)
     renderPlayer(getPlayer())
 }
+
 function getPlayer() {
     return instances[state.characterIndex]
 }
