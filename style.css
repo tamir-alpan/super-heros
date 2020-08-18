@@ -1,0 +1,16 @@
+.questionContainer, .character {
+    width: 150px;
+}
+
+.questionContainer img, .character img {
+    width: 100%;
+}
+.character {
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+}
+.questions {
+    display: flex;
+}
